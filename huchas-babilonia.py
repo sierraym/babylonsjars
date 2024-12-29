@@ -9,15 +9,8 @@ st.title("💰 Las huchas de Babilonia 💰")
 st.markdown("""
 El camino hacia la libertad financiera según El hombre más rico de Babilonia*. 
 
-Puedes ajustar los porcentajes si lo deseas.
+Puedes ajustar los porcentajes si lo deseas. Si estás en el móvil, toca la flecha superior izquierda ">" para ajustarlos.
 """)
-
-# Agregar instrucciones para móviles
-st.markdown(
-    """
-    👉 **Consejo:** Si estás en un móvil, toca la flecha superior izquierda (📂 Menú) para ajustar los porcentajes.
-    """
-)
 
 # Entrada de ingresos
 ingresos = st.number_input("Introduce tus ingresos del mes:", min_value=0.0, step=10.0)
@@ -50,10 +43,3 @@ else:
     st.header("Distribución del presupuesto")
     for category, amount in presupuesto.items():
         st.write(f"{category}: {amount:.2f} €")
-
-    # Visualización gráfica
-    df_presupuesto = pd.DataFrame({
-        "Categoría": presupuesto.keys(),
-        "Cantidad (€)": presupuesto.values()
-    })
-    st.bar_chart(data=df_presupuesto, x="Categoría", y="Cantidad (€)", height=300)
