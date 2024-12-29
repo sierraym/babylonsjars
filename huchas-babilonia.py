@@ -7,9 +7,9 @@ def calculate_budget(income, percentages):
 # Configuración inicial
 st.title("💰 Las huchas de Babilonia 💰")
 st.markdown("""
-El camino hacia la libertad financiera según El hombre más rico de Babilonia*. 
+El camino hacia la libertad financiera según "El hombre más rico de Babilonia". 
 
-Puedes ajustar los porcentajes si lo deseas. Si estás en el móvil, toca la flecha superior izquierda ">" para ajustarlos.
+Puedes ajustar los porcentajes si lo deseas. Si estás en el móvil, los encontrarás tocando la flecha superior izquierda ">".
 """)
 
 # Entrada de ingresos
