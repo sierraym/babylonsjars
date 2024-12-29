@@ -40,13 +40,6 @@ else:
     presupuesto = calculate_budget(ingresos, percentages)
 
     # Mostrar resultados
-    st.header("Presupuesto")
+    st.header("Distribución del presupuesto")
     for category, amount in presupuesto.items():
-        st.write(f"{category}: {amount:.2f} € ({percentages[category]}%)")
-
-    # Visualización gráfica
-    df_presupuesto = pd.DataFrame({
-        "Categoría": presupuesto.keys(),
-        "Cantidad (€)": presupuesto.values()
-    })
-    st.bar_chart(data=df_presupuesto, x="Categoría", y="Cantidad (€)", height=300)
+        st.write(f"{category} ({percentages[category]}%): {amount:.2f} €")
